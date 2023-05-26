@@ -1,10 +1,11 @@
 # Maintainer: David K david.dk949@gmail.com
-pkgname=vmutils
+_pkgname=vmutils
+pkgname="${_pkgname}-949sd"
 pkgver=unknown
 pkgrel=0
 pkgdesc="Miscellaneous tools for working with virtual machines"
 arch=('any')
-url="https://github.com/dk949/$pkgname"
+url="https://github.com/dk949/$_pkgname"
 license=('MIT')
 provides=(
     'vminstalliso'
@@ -12,7 +13,7 @@ provides=(
     'vmmkimg'
     'vmrun'
 )
-source=("git+$url")
+source=("$pkgname::git+$url")
 md5sums=() #autofill using updpkgsums
 sha256sums=('SKIP')
 
